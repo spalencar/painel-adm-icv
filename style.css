@@ -1,0 +1,161 @@
+/* Importação de fontes (opcional, mas recomendado) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    /* Cores do tema Escuro */
+    --color-background-dark: #121212;
+    --color-text-light: #ffffff; /* Branco para o texto */
+    --color-highlight-green: #4CAF50; /* Verde vibrante para o título */
+    --color-button-hover-dark: #2A2A2A; /* Fundo mais escuro no hover */
+    --color-button-border: #222222; 
+
+    /* Cores dos botões SÓLIDOS */
+    --color-green: #4CAF50; /* Mais sólido */
+    --color-blue: #2196F3; /* Mais sólido */
+    --color-purple: #9C27B0; /* Mais sólido */
+    --color-orange: #FF9800; /* Mais sólido */
+}
+
+/* * Estilos Gerais e Tema Escuro 
+ */
+body {
+    background-color: var(--color-background-dark);
+    color: var(--color-text-light);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+/* * Container principal da Árvore de Links 
+ */
+.linktree-container {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* * Cabeçalho e Títulos 
+ */
+.header {
+    margin-bottom: 30px;
+}
+
+.header__logo {
+    width: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.header__title {
+    color: var(--color-highlight-green);
+    font-size: 2em;
+    font-weight: 700;
+    margin: 10px 0 5px 0;
+    text-transform: uppercase;
+}
+
+.header__subtitle {
+    color: var(--color-text-light);
+    font-size: 1.1em;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* * Navegação e Botões 
+ */
+.links-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.links-nav__button {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #000; /* **TEXTO BRANCO PARA TODOS OS BOTÕES** */
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none; /* Removemos a borda para o botão sólido */
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Efeito de hover e clique */
+.links-nav__button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.6);
+}
+
+.links-nav__button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* * Cores Sólidas dos Botões 
+ */
+
+/* Botão Verde */
+.links-nav__button--green {
+    background-color: var(--color-green);
+}
+.links-nav__button--green:hover {
+    background-color: #5cb860; /* Sutilmente mais claro no hover */
+}
+
+/* Botão Azul */
+.links-nav__button--blue {
+    background-color: var(--color-blue);
+}
+.links-nav__button--blue:hover {
+    background-color: #4da6f5; /* Sutilmente mais claro no hover */
+}
+
+/* Botão Roxo */
+.links-nav__button--purple {
+    background-color: #f0bdbd;
+}
+.links-nav__button--purple:hover {
+    background-color: #cf8cda; /* Sutilmente mais claro no hover */
+}
+
+/* Botão Laranja */
+.links-nav__button--orange {
+    background-color: var(--color-orange);
+}
+.links-nav__button--orange:hover {
+    background-color: #ffad33; /* Sutilmente mais claro no hover */
+}
+
+/* * Responsividade 
+ */
+@media (max-width: 600px) {
+    body {
+        padding-top: 20px;
+    }
+
+    .linktree-container {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .header__title {
+        font-size: 1.8em;
+    }
+
+    .header__subtitle {
+        font-size: 1em;
+    }
+
+    .links-nav__button {
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+}
